@@ -4,7 +4,7 @@ public class LoanCalc {
 	static double epsilon = 0.001;  // Approximation accuracy
 	static int iterationCounter;    // Number of iterations 
 	
-	// Gets the loan data and computes the periodical payment..
+	// Gets the loan data and computes the periodical payment.
     // Expects to get three command-line arguments: loan amount (double),
     // interest rate (double, as a percentage), and number of payments (int).  
 	public static void main(String[] args) {		
