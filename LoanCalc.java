@@ -46,13 +46,13 @@ public class LoanCalc {
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
 
 		double payment = loan / n;
-		double increment = 0.001;
-		double currentDebt = loan;
+		double increment = 0.0001;
+		double currentDebt = endBalance(loan, rate, n, payment);
 		iterationCounter = 0;
 		
-		while (Math.abs(currentDebt) >= epsilon){
-			currentDebt = endBalance(loan, rate, n, payment);
+		while (currentDebt >= epsilon){
 			payment += increment;
+			currentDebt = endBalance(loan, rate, n, payment);
 			iterationCounter++;
 		}
 
@@ -66,7 +66,7 @@ public class LoanCalc {
 	// Side effect: modifies the class variable iterationCounter.
     public static double bisectionSolver(double loan, double rate, int n, double epsilon) {
 
-        double low = 1;
+        double low = loan / n;
 		double high = loan;
 		double m = (high + low) / 2;	 
 		iterationCounter = 0;
