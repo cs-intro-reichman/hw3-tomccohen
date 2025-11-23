@@ -1,3 +1,14 @@
+/*
+
+Feedback:
+
+Great Work!
+
+Yam
+
+*/
+
+
 // Computes the periodical payment necessary to pay a given loan.
 public class LoanCalc {
 	
